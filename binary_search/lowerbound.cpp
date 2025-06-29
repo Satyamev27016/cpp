@@ -4,11 +4,11 @@ using namespace std;
 int lowerbound(int arr[],int n, int target){
  int low =0;
  int high = n-1;
- int ans;
+ int ans = n;
 
  while(high >=low){
     int mid = (low+high)/2;
-    if(mid >= target){
+    if(arr[mid] >= target){
         ans = mid;
         high = mid-1;
     }else{
